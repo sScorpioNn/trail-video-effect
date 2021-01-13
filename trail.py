@@ -6,6 +6,12 @@ from tqdm import tqdm
 framesCount = 0
 d = "src"
 r = "result"
+
+if not os.path.exists("src/"):
+	os.makedirs("src/") 
+if not os.path.exists("result/"):
+	os.makedirs("result/") 
+
 for path in os.listdir(d):
     if os.path.isfile(os.path.join(d, path)):
         framesCount += 1
